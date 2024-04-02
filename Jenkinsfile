@@ -15,7 +15,7 @@
    }
    stage('Hello') {
             steps {
-                echo "Hello world"
+                echo "Hello world-3"
         }    
    }
 }
