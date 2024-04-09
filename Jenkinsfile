@@ -13,7 +13,7 @@
                 sh "mvn compile"
         }    
    }
-   stage('Hello') {
+   stage('Hello-Branch-2') {
             steps {
                 echo "Hello world-2"
         }    
