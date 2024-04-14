@@ -1,7 +1,7 @@
- pipeline {
-    agent any {
-         
-   }
+pipeline {
+    agent  {
+        label 'apple'
+    }
     tools {
         maven 'maven3'
     }
@@ -9,7 +9,7 @@
     stages {
         stage('Git checkout') {
             steps {
-                 git branch: 'main', url: ' https://github.com/vishal343012/demo-Maven.git/'
+                git branch: 'main', url: 'https://github.com/vishal343012/demo-Maven.git'
             }
         }
     
@@ -22,4 +22,6 @@
             steps {
                 sh 'mvn package'
             }
-        }    
+        }
+    } 
+}    
