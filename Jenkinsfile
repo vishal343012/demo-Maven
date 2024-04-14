@@ -9,7 +9,7 @@
     stages {
         stage('Git checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/vishal343012/demo-Maven.git'
+                 git branch: 'main', url: ' https://github.com/vishal343012/demo-Maven.git/'
             }
         }
     
