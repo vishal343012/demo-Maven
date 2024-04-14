@@ -1,22 +1,30 @@
  pipeline {
-    agent any
+    agent  {
+        label 'apple'
+    }
+    tools {
+        maven 'maven3'
+    }
 
     stages {
-        stage('git checkout') {
+        stage('Git checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/vishal343012/demo-Maven.git'
             }
         }
     
-        stage('compile') {
+    stage('Test') {
             steps {
-                sh "mvn compile"
-        }    
-   }
-   stage('Hello Branch-3') {
+                sh 'mvn test'
+            }
+        }
+    stage('Package') {
             steps {
-                echo "Hello world-3"
+                sh 'mvn package'
+            }
         }    
-   }
-}
-}
+     stage('Hello-World') {
+            steps {
+               echo 'hello-world'
+            }
+        }    
