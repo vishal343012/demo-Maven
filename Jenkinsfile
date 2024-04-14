@@ -1,4 +1,4 @@
- pipeline {
+pipeline {
     agent  {
         label 'apple'
     }
@@ -22,9 +22,11 @@
             steps {
                 sh 'mvn package'
             }
-        }    
-     stage('Hello-World') {
+        }
+    stage('Hello_print') {
             steps {
-               echo 'hello-world'
+                echo 'Hello-World'
             }
-        }    
+        }
+    } 
+}    
