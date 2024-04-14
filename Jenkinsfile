@@ -23,7 +23,7 @@ pipeline {
                 sh 'mvn package'
             }
         }
-    stage('Hello_print') {
+    stage('Hello_print3') {
             steps {
                 echo 'Hello-World'
             }
