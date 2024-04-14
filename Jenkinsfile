@@ -1,7 +1,7 @@
  pipeline {
-    agent  {
-        label 'apple'
-    }
+    agent any {
+         
+   }
     tools {
         maven 'maven3'
     }
